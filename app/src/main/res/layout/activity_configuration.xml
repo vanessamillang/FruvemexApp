@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".ConfigurationActivity">
+
+    <!-- Header with logo, user name, and profile button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="24dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Logo de Leerlib" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Configuración"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/profileButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Profile"
+                    android:src="@drawable/perfil" />
+
+                <TextView
+                    android:id="@+id/usernameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Username"
+                    android:textColor="#666666"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView wrapping the ScrollView content -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contentCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/headerCardView"
+        app:layout_constraintBottom_toTopOf="@id/footerCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Opción Editar Perfil -->
+                <TextView
+                    android:id="@+id/editProfileTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar perfil"
+                    android:padding="16dp"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawableTint="#333333"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:typeface="sans"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#DDDDDD"/>
+
+                <!-- Opción Configuración de la Cuenta -->
+                <TextView
+                    android:id="@+id/accountSettingsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Configuración de la cuenta"
+                    android:padding="16dp"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawableTint="#333333"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:typeface="sans"
+                    android:textStyle="normal" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#DDDDDD"/>
+
+                <!-- Opción Sobre Fruvemex -->
+                <TextView
+                    android:id="@+id/aboutFruvemexTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sobre Fruvemex"
+                    android:padding="16dp"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawableTint="#333333"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:typeface="sans"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#DDDDDD"/>
+
+                <!-- Opción Ayuda y Apoyo Técnico -->
+                <TextView
+                    android:id="@+id/helpSupportTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ayuda y apoyo técnico"
+                    android:padding="16dp"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawableTint="#333333"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:typeface="sans"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#DDDDDD"/>
+
+                <!-- Opción Cerrar Sesión -->
+                <TextView
+                    android:id="@+id/logoutTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cerrar sesión"
+                    android:padding="16dp"
+                    android:drawableEnd="@drawable/ic_chevron_right"
+                    android:drawableTint="#333333"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:typeface="sans"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Footer with additional options -->
+    <LinearLayout
+        android:id="@+id/footerCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Home Button -->
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Home"
+            android:src="@drawable/ic_home" />
+
+        <!-- Add Content Button -->
+        <ImageButton
+            android:id="@+id/addContentButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Agregar contenido"
+            android:src="@drawable/ic_add_content"
+            android:layout_marginStart="16dp" />
+
+        <!-- Logout ImageButton -->
+        <ImageButton
+            android:id="@+id/logoutButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:backgroundTint="#397A3C"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Logout"
+            android:src="@drawable/ic_logout" />
+
+
+        <!-- My Library Button -->
+        <ImageButton
+            android:id="@+id/myLibraryButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Mi biblioteca"
+            android:src="@drawable/ic_favorites" />
+
+        <!-- Remove Content Button -->
+        <ImageButton
+            android:id="@+id/removeContentButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Eliminar contenido"
+            android:src="@drawable/ic_remove" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

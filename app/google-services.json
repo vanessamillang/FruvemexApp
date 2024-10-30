@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "708083836683",
+    "project_id": "fruvemex-java",
+    "storage_bucket": "fruvemex-java.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708083836683:android:983fbda33adad8779ee40e",
+        "android_client_info": {
+          "package_name": "com.example.fruvemex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOyWh_IrOIzZuYCNVC90cSq_hUz8Q9inU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
